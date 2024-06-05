@@ -42,6 +42,10 @@ p{
     font-weight: 700;
     font-size: 26px;
     line-height: 32.5px;
+    @media only screen and (max-width: 1440px) {
+        font-size: 20px;
+
+    }
 }
 
 .small-font{
@@ -59,19 +63,33 @@ p{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        
+        gap: 10px;
         padding: 24px 75px;
+        @media only screen and (max-width: 1278px) {
+            gap: 32px;
+
+        }
     }
 
     
     &__nav-ul{
         display: flex;
+        @media only screen and (max-width: 1440px) {
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
         
     }
 
     &__nav-li{
         padding: 0 50px;  
+
         font-weight: 600; 
+        @media only screen and (max-width: 1278px) {
+            padding: 0 20px;
+        }
     }
 
     &__contact{
@@ -79,11 +97,19 @@ p{
         align-items: center;
         justify-content: space-between;
         gap: 40px;
+        @media only screen and (max-width: 1440px) {
+            flex-wrap: wrap;
+            flex-direction: column-reverse;
+            gap: 20px;
+        }
         
     }
     &__contact-items{
         display: flex;
         gap: 12px;
+        @media only screen and (max-width: 1440px) {
+            justify-content: space-between;
+        }
     }
 
     &__btn{
@@ -95,6 +121,10 @@ p{
 .border{
    
     border-right: 1px solid rgba(51, 51, 51, 1);
+
+    @media only screen and (max-width: 1278px) {
+        // border-right: none;
+    }
 }
 
 //Main
@@ -102,7 +132,7 @@ p{
 .main{
     
     &__slider{
-        padding: 200px 75px  0;
+        padding: 200px 75px  47px;
         background-image: url(../asets/background.png);
         background-repeat: no-repeat;
         background-size: cover;
@@ -113,6 +143,10 @@ p{
         font-weight: 900;
         line-height: 99px;
         margin: 20px 0;
+        @media only screen and (max-width: 1278px) {
+            font-size: 60px;
+
+        }
     }
 
     &__btn{
@@ -130,11 +164,30 @@ p{
             background: linear-gradient(134.04deg, #FFB800 109.07%, #FFDF00 -7.01%);
         }
     }
+
+    &__show{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__show-more{
+        font-size: 14px;
+        font-weight: 700;
+    }
+    &__show-img{
+        width: 18px;
+    }
 }
 
 //Slider
 .slider__text{
     max-width: 1200px;
+    @media only screen and (max-width: 1278px) {
+        max-width: 1000px;
+
+    }
 }
 .slider{
 
@@ -147,10 +200,17 @@ p{
 }
 
 .swiper-pagination-bullet {
-    --swiper-pagination-color: #F3F6FF;
+    --swiper-pagination-color: rgba(51, 51, 51, 1);
+    --swiper-pagination-bullet-width: 16px;
+    --swiper-pagination-bullet-height: 16px;
+    --swiper-pagination-bullet-size: 16px;
+    --swiper-pagination-bullet-horizontal-gap: 17px;
+    --swiper-pagination-left: 0;
 }
 .swiper-pagination-bullet-active{
-    --swiper-pagination-color: #0A032A;
+    --swiper-pagination-color: rgba(255, 208, 14, 1);
+    --swiper-pagination-bullet-width: 16px;
+    --swiper-pagination-bullet-height: 16px;
 }
 
 .swiper-wrapper{
@@ -160,3 +220,15 @@ p{
 .swiper-mobile{
     display: none;
 }
+
+.slider-pagination{
+    margin-top: 200px;
+    left: 0;
+    position: relative;
+    max-width: 260px;
+    @media only screen and (max-width: 1278px) {
+        margin-top: 60px;
+
+    }
+}
+
